@@ -1,0 +1,11 @@
+MASYVAS X
+-2
+-2
+-2
+MASYVAS Y
+-6
+3
+7
+1-o trikampo plotas = 9
+1-o trikampo plotas = 13
+2-o trikampo plotas = 4
