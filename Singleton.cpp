@@ -22,18 +22,18 @@ Singleton* Singleton::Instance()
 }
 
 
-int Nuskaitoma(ofstream& YF, int masx[1000], int masy[1000])
+int Nuskaitoma(ofstream& YF, int masx[1], int masy[1])
 {
     int kiekis_x=0, kiekis_y=0,kiekis;
-    ifstream IsX("FailasX.txt");
-    ifstream IsY("FailasY.txt");
-    YF << "MASYVAS X" << endl;
+    ifstream IsX("FailasY.txt");
+    ifstream IsY("FailasX.txt");
+    YF << "MASYVAS Y" << endl;
     while (IsX >> masx[kiekis_x])
     {
         YF << masx[kiekis_x] << endl;
         kiekis_x++;
     }
-    YF << "MASYVAS Y" << endl;
+    YF << "MASYVAS X" << endl;
     while (IsY >> masy[kiekis_y])
     {
         YF << masy[kiekis_y] << endl;
@@ -41,7 +41,7 @@ int Nuskaitoma(ofstream& YF, int masx[1000], int masy[1000])
     }
     if (kiekis_x>kiekis_y)
         kiekis=kiekis_y;
-        else if (kiekis_x<kiekis_y)
+        else if (kiekis_y<kiekis_x)
             kiekis=kiekis_x;
             else kiekis=kiekis_x;
     return kiekis;
